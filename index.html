@@ -865,33 +865,52 @@
         </section>
         
         <section id="contact" class="contact">
-            <h2>Contact Your Waterfall Specialist</h2>
-            <p>Interested in buying or selling a home in Waterfall? Get in touch with Dr. Jan Duffy today.</p>
-            
-            <form id="contact-form" aria-label="Contact form">
-                <div class="form-group">
-                    <label for="name">Name</label>
-                    <input type="text" id="name" name="name" required aria-required="true">
-                </div>
-                
-                <div class="form-group">
-                    <label for="email">Email</label>
-                    <input type="email" id="email" name="email" required aria-required="true">
-                </div>
-                
-                <div class="form-group">
-                    <label for="phone">Phone</label>
-                    <input type="tel" id="phone" name="phone">
-                </div>
-                
-                <div class="form-group">
-                    <label for="message">Message</label>
-                    <textarea id="message" name="message" rows="5" required aria-required="true"></textarea>
-                </div>
-                
-                <button type="submit">Send Message</button>
-            </form>
-            
+    <h2>Contact Your Waterfall Specialist</h2>
+    <p>Interested in buying or selling a home in Waterfall? Get in touch with Dr. Jan Duffy today.</p>
+    
+    <form id="fub-contact-form" aria-label="Contact form">
+        <div class="form-group">
+            <label for="name">Full Name</label>
+            <input type="text" id="name" name="name" required aria-required="true">
+        </div>
+        
+        <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required aria-required="true">
+        </div>
+        
+        <div class="form-group">
+            <label for="phone">Phone</label>
+            <input type="tel" id="phone" name="phone">
+        </div>
+        
+        <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="5" required aria-required="true"></textarea>
+        </div>
+        
+        <div class="form-group">
+            <label for="leadSource">How did you hear about us?</label>
+            <select id="leadSource" name="leadSource">
+                <option value="website">Website</option>
+                <option value="referral">Referral</option>
+                <option value="social">Social Media</option>
+                <option value="search">Search Engine</option>
+                <option value="other">Other</option>
+            </select>
+        </div>
+        
+        <div id="form-status" class="hidden"></div>
+        
+        <button type="submit" id="submit-button">Send Message</button>
+    </form>
+    
+    <div style="margin-top: 30px;">
+        <h3>Direct Contact</h3>
+        <p>Call: <a href="tel:7025001955" aria-label="Call Dr. Jan Duffy">(702) 842-2276</a></p>
+        <p>Hours: 6:00 AM–9:00 PM daily</p>
+    </div>
+</section>
             <div style="margin-top: 30px;">
                 <h3>Direct Contact</h3>
                 <p>Call: <a href="tel:7025001955" aria-label="Call Dr. Jan Duffy">(702) 842-2276</a></p>
