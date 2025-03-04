@@ -1,0 +1,12 @@
+# robots.txt for WaterfallHomesNorthLasVegas.com
+User-agent: *
+Allow: /
+Disallow: /private/
+Disallow: /temp/
+Disallow: /admin/
+
+# Sitemap location
+Sitemap: https://www.waterfallhomesnorthlasvegas.com/sitemap.xml
+
+# Crawl delay to prevent server overload
+Crawl-delay: 1
