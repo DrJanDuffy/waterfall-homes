@@ -1,0 +1,15 @@
+# Redirect domain aliases to primary domain
+https://waterfallhomes.com/* https://www.waterfallhomesnorthlasvegas.com/:splat 301!
+https://waterfall-homes.com/* https://www.waterfallhomesnorthlasvegas.com/:splat 301!
+
+# Handle common paths people might try
+/home              /                  301
+/about-us          /#about-business   301
+/listings          /#listings         301
+/tour              /#schedule         301
+/contact-us        /#contact          301
+/properties        /#listings         301
+/homes             /#listings         301
+
+# SPA fallback
+/*                 /index.html        200
