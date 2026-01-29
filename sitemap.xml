@@ -42,4 +42,28 @@
       <changefreq>monthly</changefreq>
       <priority>0.8</priority>
    </url>
+   <url>
+      <loc>https://www.waterfallhomesnorthlasvegas.com/market-report</loc>
+      <lastmod>2026-01-28</lastmod>
+      <changefreq>monthly</changefreq>
+      <priority>0.7</priority>
+   </url>
+   <url>
+      <loc>https://www.waterfallhomesnorthlasvegas.com/first-time-buyers</loc>
+      <lastmod>2026-01-28</lastmod>
+      <changefreq>monthly</changefreq>
+      <priority>0.7</priority>
+   </url>
+   <url>
+      <loc>https://www.waterfallhomesnorthlasvegas.com/relocation</loc>
+      <lastmod>2026-01-28</lastmod>
+      <changefreq>monthly</changefreq>
+      <priority>0.7</priority>
+   </url>
+   <url>
+      <loc>https://www.waterfallhomesnorthlasvegas.com/hoa-info</loc>
+      <lastmod>2026-01-28</lastmod>
+      <changefreq>monthly</changefreq>
+      <priority>0.7</priority>
+   </url>
 </urlset>
