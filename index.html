@@ -424,6 +424,68 @@
             width: 100%;
         }
         
+        /* Dropdown Menu Styles */
+        .nav-dropdown {
+            position: relative;
+        }
+        
+        .nav-dropdown .dropdown-toggle {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+        
+        .nav-dropdown .dropdown-toggle i {
+            font-size: 0.7rem;
+            transition: transform 0.3s ease;
+        }
+        
+        .nav-dropdown:hover .dropdown-toggle i {
+            transform: rotate(180deg);
+        }
+        
+        .dropdown-menu {
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            transform: translateX(-50%);
+            background: white;
+            min-width: 200px;
+            padding: 12px 0;
+            border-radius: 8px;
+            box-shadow: var(--shadow-lg);
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+            z-index: 1000;
+            list-style: none;
+        }
+        
+        .nav-dropdown:hover .dropdown-menu {
+            opacity: 1;
+            visibility: visible;
+        }
+        
+        .dropdown-menu li {
+            padding: 0;
+        }
+        
+        .dropdown-menu a {
+            display: block;
+            padding: 10px 20px;
+            color: var(--text);
+            font-size: 0.875rem;
+        }
+        
+        .dropdown-menu a:hover {
+            background: var(--bg-light);
+            color: var(--primary);
+        }
+        
+        .dropdown-menu a::after {
+            display: none;
+        }
+        
         .navbar-cta {
             display: flex;
             align-items: center;
@@ -1371,6 +1433,22 @@
                 display: flex;
             }
             
+            .dropdown-menu {
+                position: static;
+                transform: none;
+                box-shadow: none;
+                opacity: 1;
+                visibility: visible;
+                padding-left: 20px;
+                background: var(--bg-light);
+                border-radius: 8px;
+                margin-top: 8px;
+            }
+            
+            .nav-dropdown .dropdown-toggle i {
+                display: none;
+            }
+            
             .mobile-menu-btn {
                 display: block;
             }
@@ -1467,12 +1545,21 @@
             </a>
             
             <ul class="navbar-nav" id="navbar-nav">
-                <li><a href="#about">About</a></li>
-                <li><a href="#listings">Listings</a></li>
-                <li><a href="#amenities">Amenities</a></li>
-                <li><a href="#testimonials">Reviews</a></li>
-                <li><a href="#faq">FAQ</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li><a href="/about">About</a></li>
+                <li><a href="/buy">Buy</a></li>
+                <li><a href="/sell">Sell</a></li>
+                <li><a href="/neighborhood">Neighborhood</a></li>
+                <li class="nav-dropdown">
+                    <a href="#" class="dropdown-toggle">Resources <i class="fas fa-chevron-down"></i></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="/schools">Schools</a></li>
+                        <li><a href="/market-report">Market Report</a></li>
+                        <li><a href="/first-time-buyers">First-Time Buyers</a></li>
+                        <li><a href="/relocation">Relocation Guide</a></li>
+                        <li><a href="/hoa-info">HOA Info</a></li>
+                    </ul>
+                </li>
+                <li><a href="/contact">Contact</a></li>
             </ul>
             
             <div class="navbar-cta">
@@ -2066,11 +2153,22 @@
                 <div class="footer-links">
                     <h4>Quick Links</h4>
                     <ul>
-                        <li><a href="#listings">Available Homes</a></li>
-                        <li><a href="#amenities">Community Amenities</a></li>
-                        <li><a href="#homevalue">Home Valuation</a></li>
-                        <li><a href="#schedule">Schedule Tour</a></li>
-                        <li><a href="#contact">Contact</a></li>
+                        <li><a href="/buy">Buy a Home</a></li>
+                        <li><a href="/sell">Sell Your Home</a></li>
+                        <li><a href="/neighborhood">Neighborhood Guide</a></li>
+                        <li><a href="/market-report">Market Report</a></li>
+                        <li><a href="/contact">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-links">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="/about">About Dr. Duffy</a></li>
+                        <li><a href="/schools">Schools</a></li>
+                        <li><a href="/first-time-buyers">First-Time Buyers</a></li>
+                        <li><a href="/relocation">Relocation Guide</a></li>
+                        <li><a href="/hoa-info">HOA Information</a></li>
                     </ul>
                 </div>
                 

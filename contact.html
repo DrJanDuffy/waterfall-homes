@@ -179,6 +179,16 @@
         .navbar-links { display: flex; gap: 32px; list-style: none; }
         .navbar-links a { color: var(--text); font-weight: 500; }
         .navbar-links a:hover { color: var(--primary); }
+        .navbar-links a.active { color: var(--primary); }
+        .nav-dropdown { position: relative; }
+        .nav-dropdown .dropdown-toggle { display: flex; align-items: center; gap: 6px; }
+        .nav-dropdown .dropdown-toggle i { font-size: 0.7rem; transition: transform 0.3s ease; }
+        .nav-dropdown:hover .dropdown-toggle i { transform: rotate(180deg); }
+        .dropdown-menu { position: absolute; top: 100%; left: 50%; transform: translateX(-50%); background: white; min-width: 200px; padding: 12px 0; border-radius: 8px; box-shadow: 0 10px 40px rgba(0,0,0,0.15); opacity: 0; visibility: hidden; transition: all 0.3s ease; z-index: 1000; list-style: none; }
+        .nav-dropdown:hover .dropdown-menu { opacity: 1; visibility: visible; }
+        .dropdown-menu li { padding: 0; }
+        .dropdown-menu a { display: block; padding: 10px 20px; font-size: 0.875rem; }
+        .dropdown-menu a:hover { background: var(--bg-light); }
         .btn { display: inline-flex; align-items: center; gap: 8px; padding: 12px 24px; border-radius: 8px; font-weight: 600; transition: all 0.2s; border: none; cursor: pointer; font-size: 1rem; }
         .btn-primary { background: var(--primary); color: white; }
         .btn-primary:hover { background: var(--primary-light); color: white; }
@@ -253,9 +263,18 @@
         .faq-item h4 { margin: 0 0 12px 0; color: var(--primary); font-family: 'Inter', sans-serif; }
         .faq-item p { margin: 0; color: var(--text-light); }
         
-        .footer { background: var(--primary-dark); color: white; padding: 48px 0; text-align: center; }
-        .footer p { opacity: 0.8; margin-bottom: 8px; }
+        .footer { background: var(--primary-dark); color: white; padding: 60px 0 30px; }
+        .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 40px; margin-bottom: 40px; }
+        .footer-brand h3 { font-size: 1.5rem; margin-bottom: 12px; }
+        .footer-brand p { opacity: 0.8; margin-bottom: 8px; font-size: 0.9rem; }
+        .footer-links h4, .footer-contact h4 { font-size: 1rem; margin-bottom: 16px; }
+        .footer-links ul, .footer-contact ul { list-style: none; }
+        .footer-links li, .footer-contact li { margin-bottom: 10px; font-size: 0.9rem; opacity: 0.8; }
         .footer a { color: white; }
+        .footer a:hover { opacity: 1; }
+        .footer-bottom { border-top: 1px solid rgba(255,255,255,0.1); padding-top: 24px; text-align: center; font-size: 0.85rem; opacity: 0.7; }
+        @media (max-width: 768px) { .footer-grid { grid-template-columns: 1fr 1fr; } }
+        @media (max-width: 480px) { .footer-grid { grid-template-columns: 1fr; } }
         
         @media (max-width: 768px) {
             .contact-grid { grid-template-columns: 1fr; }
@@ -275,7 +294,17 @@
                 <li><a href="/buy">Buy</a></li>
                 <li><a href="/sell">Sell</a></li>
                 <li><a href="/neighborhood">Neighborhood</a></li>
-                <li><a href="/contact">Contact</a></li>
+                <li class="nav-dropdown">
+                    <a href="#" class="dropdown-toggle">Resources <i class="fas fa-chevron-down"></i></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="/schools">Schools</a></li>
+                        <li><a href="/market-report">Market Report</a></li>
+                        <li><a href="/first-time-buyers">First-Time Buyers</a></li>
+                        <li><a href="/relocation">Relocation Guide</a></li>
+                        <li><a href="/hoa-info">HOA Info</a></li>
+                    </ul>
+                </li>
+                <li><a href="/contact" class="active">Contact</a></li>
             </ul>
             <a href="tel:7028422276" class="btn btn-primary"><i class="fas fa-phone"></i> (702) 842-2276</a>
         </div>
@@ -532,12 +561,46 @@
 
     <footer class="footer">
         <div class="container">
-            <p><strong>Dr. Jan Duffy, REALTOR®</strong></p>
-            <p>Berkshire Hathaway HomeServices Nevada Properties</p>
-            <p>4063 Lower Saxon Ave, North Las Vegas, NV 89085</p>
-            <p><a href="tel:7028422276">(702) 842-2276</a> | <a href="mailto:DrJanSells@WaterfallHomesNorthLasVegas.com">DrJanSells@WaterfallHomesNorthLasVegas.com</a></p>
-            <p>License S.0197614.LLC</p>
-            <p style="margin-top: 24px;">&copy; 2026 Waterfall Homes North Las Vegas. All rights reserved.</p>
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <h3>Dr. Jan Duffy</h3>
+                    <p>REALTOR® | Berkshire Hathaway HomeServices Nevada Properties</p>
+                    <p>Waterfall Homes Specialist | North Las Vegas, NV</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="/buy">Buy a Home</a></li>
+                        <li><a href="/sell">Sell Your Home</a></li>
+                        <li><a href="/neighborhood">Neighborhood Guide</a></li>
+                        <li><a href="/market-report">Market Report</a></li>
+                        <li><a href="/contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="/about">About Dr. Duffy</a></li>
+                        <li><a href="/schools">Schools</a></li>
+                        <li><a href="/first-time-buyers">First-Time Buyers</a></li>
+                        <li><a href="/relocation">Relocation Guide</a></li>
+                        <li><a href="/hoa-info">HOA Information</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h4>Contact</h4>
+                    <ul>
+                        <li><a href="tel:7028422276">(702) 842-2276</a></li>
+                        <li><a href="mailto:DrJanSells@WaterfallHomesNorthLasVegas.com">Email Us</a></li>
+                        <li>4063 Lower Saxon Ave</li>
+                        <li>North Las Vegas, NV 89085</li>
+                        <li>License: S.0197614.LLC</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Dr. Jan Duffy, REALTOR® | Berkshire Hathaway HomeServices Nevada Properties. All rights reserved.</p>
+            </div>
         </div>
     </footer>
 
