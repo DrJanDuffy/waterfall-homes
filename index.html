@@ -2002,44 +2002,12 @@
             </div>
             
             <div class="contact-grid">
-                <form class="contact-form" id="contact-form">
-                    <div class="form-group">
-                        <label for="name">Full Name *</label>
-                        <input type="text" id="name" name="name" required>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="email">Email Address *</label>
-                        <input type="email" id="email" name="email" required>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="phone">Phone Number</label>
-                        <input type="tel" id="phone" name="phone">
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="interest">I'm Interested In</label>
-                        <select id="interest" name="interest">
-                            <option value="buying">Buying a Home</option>
-                            <option value="selling">Selling My Home</option>
-                            <option value="both">Both Buying & Selling</option>
-                            <option value="valuation">Home Valuation</option>
-                            <option value="info">General Information</option>
-                        </select>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="message">Message *</label>
-                        <textarea id="message" name="message" required placeholder="Tell me about your real estate needs..."></textarea>
-                    </div>
-                    
-                    <button type="submit" class="btn btn-primary form-submit">
-                        <i class="fas fa-paper-plane"></i> Send Message
-                    </button>
-                    
-                    <div id="form-status"></div>
-                </form>
+                <div class="contact-form">
+                    <h3 style="margin-bottom: 16px; font-family: 'Playfair Display', serif;">Schedule a Consultation</h3>
+                    <!-- Calendly inline widget begin -->
+                    <div class="calendly-inline-widget" data-url="https://calendly.com/drjanduffy/appointment" style="min-width:280px;height:580px;"></div>
+                    <!-- Calendly inline widget end -->
+                </div>
                 
                 <div class="contact-info-card">
                     <h3>Contact Information</h3>
@@ -2212,56 +2180,6 @@
                     document.getElementById('navbar-nav').classList.remove('active');
                 }
             });
-        });
-        
-        // Contact form handling
-        document.getElementById('contact-form').addEventListener('submit', async function(e) {
-            e.preventDefault();
-            
-            const submitBtn = this.querySelector('button[type="submit"]');
-            const statusDiv = document.getElementById('form-status');
-            const originalText = submitBtn.innerHTML;
-            
-            submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
-            submitBtn.disabled = true;
-            
-            const formData = new FormData(this);
-            const data = Object.fromEntries(formData.entries());
-            
-            try {
-                // Prepare data for Follow Up Boss
-                const leadData = {
-                    firstName: data.name.split(' ')[0],
-                    lastName: data.name.split(' ').slice(1).join(' ') || '',
-                    emails: [{ value: data.email }],
-                    phones: data.phone ? [{ value: data.phone }] : [],
-                    source: data.interest || 'website',
-                    sourceUrl: window.location.href,
-                    note: data.message,
-                    tags: ["Waterfall Homes", "Website Lead"]
-                };
-                
-                // Submit to Vercel serverless function
-                const response = await fetch('/api/submit-lead', {
-                    method: 'POST',
-                    headers: { 'Content-Type': 'application/json' },
-                    body: JSON.stringify(leadData)
-                });
-                
-                if (response.ok) {
-                    statusDiv.className = 'success';
-                    statusDiv.innerHTML = '<i class="fas fa-check-circle"></i> Thank you! Your message has been sent. Dr. Duffy will contact you shortly.';
-                    this.reset();
-                } else {
-                    throw new Error('Form submission failed');
-                }
-            } catch (error) {
-                statusDiv.className = 'error';
-                statusDiv.innerHTML = '<i class="fas fa-exclamation-circle"></i> Sorry, there was an error. Please call (702) 842-2276 instead.';
-            }
-            
-            submitBtn.innerHTML = originalText;
-            submitBtn.disabled = false;
         });
         
         // Navbar scroll effect
