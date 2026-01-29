@@ -6,4 +6,40 @@
       <changefreq>weekly</changefreq>
       <priority>1.0</priority>
    </url>
+   <url>
+      <loc>https://www.waterfallhomesnorthlasvegas.com/about</loc>
+      <lastmod>2026-01-28</lastmod>
+      <changefreq>monthly</changefreq>
+      <priority>0.8</priority>
+   </url>
+   <url>
+      <loc>https://www.waterfallhomesnorthlasvegas.com/buy</loc>
+      <lastmod>2026-01-28</lastmod>
+      <changefreq>weekly</changefreq>
+      <priority>0.9</priority>
+   </url>
+   <url>
+      <loc>https://www.waterfallhomesnorthlasvegas.com/sell</loc>
+      <lastmod>2026-01-28</lastmod>
+      <changefreq>weekly</changefreq>
+      <priority>0.9</priority>
+   </url>
+   <url>
+      <loc>https://www.waterfallhomesnorthlasvegas.com/neighborhood</loc>
+      <lastmod>2026-01-28</lastmod>
+      <changefreq>monthly</changefreq>
+      <priority>0.8</priority>
+   </url>
+   <url>
+      <loc>https://www.waterfallhomesnorthlasvegas.com/schools</loc>
+      <lastmod>2026-01-28</lastmod>
+      <changefreq>monthly</changefreq>
+      <priority>0.7</priority>
+   </url>
+   <url>
+      <loc>https://www.waterfallhomesnorthlasvegas.com/contact</loc>
+      <lastmod>2026-01-28</lastmod>
+      <changefreq>monthly</changefreq>
+      <priority>0.8</priority>
+   </url>
 </urlset>

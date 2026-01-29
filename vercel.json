@@ -3,25 +3,23 @@
   "framework": null,
   "buildCommand": null,
   "outputDirectory": ".",
-  "rewrites": [
-    { "source": "/(.*)", "destination": "/index.html" }
-  ],
+  "cleanUrls": true,
+  "trailingSlash": false,
   "redirects": [
     { "source": "/home", "destination": "/", "permanent": true },
-    { "source": "/about-us", "destination": "/#about", "permanent": true },
-    { "source": "/about", "destination": "/#about", "permanent": true },
-    { "source": "/listings", "destination": "/#listings", "permanent": true },
-    { "source": "/tour", "destination": "/#schedule", "permanent": true },
-    { "source": "/schedule", "destination": "/#schedule", "permanent": true },
-    { "source": "/contact-us", "destination": "/#contact", "permanent": true },
-    { "source": "/properties", "destination": "/#listings", "permanent": true },
-    { "source": "/homes", "destination": "/#listings", "permanent": true },
-    { "source": "/amenities", "destination": "/#amenities", "permanent": true },
+    { "source": "/about-us", "destination": "/about", "permanent": true },
+    { "source": "/listings", "destination": "/buy", "permanent": true },
+    { "source": "/tour", "destination": "/contact", "permanent": true },
+    { "source": "/schedule", "destination": "/contact", "permanent": true },
+    { "source": "/contact-us", "destination": "/contact", "permanent": true },
+    { "source": "/properties", "destination": "/buy", "permanent": true },
+    { "source": "/homes", "destination": "/buy", "permanent": true },
+    { "source": "/amenities", "destination": "/neighborhood", "permanent": true },
     { "source": "/faq", "destination": "/#faq", "permanent": true },
     { "source": "/reviews", "destination": "/#testimonials", "permanent": true },
     { "source": "/testimonials", "destination": "/#testimonials", "permanent": true },
-    { "source": "/home-value", "destination": "/#homevalue", "permanent": true },
-    { "source": "/valuation", "destination": "/#homevalue", "permanent": true }
+    { "source": "/home-value", "destination": "/sell", "permanent": true },
+    { "source": "/valuation", "destination": "/sell", "permanent": true }
   ],
   "headers": [
     {
