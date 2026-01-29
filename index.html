@@ -2159,8 +2159,8 @@
                     tags: ["Waterfall Homes", "Website Lead"]
                 };
                 
-                // Submit to Cloudflare Pages function
-                const response = await fetch('/functions/functions/submit-to-fub', {
+                // Submit to Vercel serverless function
+                const response = await fetch('/api/submit-lead', {
                     method: 'POST',
                     headers: { 'Content-Type': 'application/json' },
                     body: JSON.stringify(leadData)

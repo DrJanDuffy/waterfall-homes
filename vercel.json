@@ -1,0 +1,51 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "framework": null,
+  "buildCommand": null,
+  "outputDirectory": ".",
+  "rewrites": [
+    { "source": "/(.*)", "destination": "/index.html" }
+  ],
+  "redirects": [
+    { "source": "/home", "destination": "/", "permanent": true },
+    { "source": "/about-us", "destination": "/#about", "permanent": true },
+    { "source": "/about", "destination": "/#about", "permanent": true },
+    { "source": "/listings", "destination": "/#listings", "permanent": true },
+    { "source": "/tour", "destination": "/#schedule", "permanent": true },
+    { "source": "/schedule", "destination": "/#schedule", "permanent": true },
+    { "source": "/contact-us", "destination": "/#contact", "permanent": true },
+    { "source": "/properties", "destination": "/#listings", "permanent": true },
+    { "source": "/homes", "destination": "/#listings", "permanent": true },
+    { "source": "/amenities", "destination": "/#amenities", "permanent": true },
+    { "source": "/faq", "destination": "/#faq", "permanent": true },
+    { "source": "/reviews", "destination": "/#testimonials", "permanent": true },
+    { "source": "/testimonials", "destination": "/#testimonials", "permanent": true },
+    { "source": "/home-value", "destination": "/#homevalue", "permanent": true },
+    { "source": "/valuation", "destination": "/#homevalue", "permanent": true }
+  ],
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        { "key": "X-Frame-Options", "value": "DENY" },
+        { "key": "X-Content-Type-Options", "value": "nosniff" },
+        { "key": "Referrer-Policy", "value": "strict-origin-when-cross-origin" },
+        { "key": "X-XSS-Protection", "value": "1; mode=block" }
+      ]
+    },
+    {
+      "source": "/sitemap.xml",
+      "headers": [
+        { "key": "Content-Type", "value": "application/xml; charset=utf-8" },
+        { "key": "Cache-Control", "value": "public, max-age=86400" }
+      ]
+    },
+    {
+      "source": "/robots.txt",
+      "headers": [
+        { "key": "Content-Type", "value": "text/plain; charset=utf-8" },
+        { "key": "Cache-Control", "value": "public, max-age=86400" }
+      ]
+    }
+  ]
+}
