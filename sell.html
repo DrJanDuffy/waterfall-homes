@@ -153,6 +153,9 @@
     }
     </script>
     
+    <!-- RealScout Widget -->
+    <script src="https://em.realscout.com/widgets/realscout-web-components.umd.js" type="module"></script>
+    
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -286,6 +289,21 @@
                 <a href="#valuation" class="btn btn-accent"><i class="fas fa-chart-line"></i> Get Free Home Value</a>
                 <a href="https://calendly.com/drjanduffy/listing-consultation" target="_blank" class="btn btn-white"><i class="fas fa-calendar"></i> Listing Consultation</a>
             </div>
+        </div>
+    </section>
+
+    <!-- Featured Listings Section -->
+    <section class="listings-bar" style="background: var(--bg-light); padding: 48px 0;">
+        <div class="container">
+            <h2 style="text-align: center; margin-bottom: 8px;">Featured Waterfall Homes</h2>
+            <p style="text-align: center; color: var(--text-light); margin-bottom: 32px;">See what homes are selling for in your neighborhood</p>
+            <realscout-office-listings 
+                agent-encoded-id="QWdlbnQtMjI1MDUw" 
+                sort-order="STATUS_AND_SIGNIFICANT_CHANGE" 
+                listing-status="For Sale" 
+                property-types="SFR,MF"
+                style="width: 100%; border-radius: 12px; overflow: hidden;">
+            </realscout-office-listings>
         </div>
     </section>
 

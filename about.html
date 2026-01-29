@@ -147,6 +147,9 @@
     }
     </script>
     
+    <!-- RealScout Widget -->
+    <script src="https://em.realscout.com/widgets/realscout-web-components.umd.js" type="module"></script>
+    
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -274,6 +277,21 @@
             </nav>
             <h1>About Dr. Jan Duffy, REALTOR®</h1>
             <p>Your Trusted Waterfall Neighborhood Specialist with Berkshire Hathaway HomeServices Nevada Properties | Serving North Las Vegas Since 2008</p>
+        </div>
+    </section>
+
+    <!-- Featured Listings Section -->
+    <section class="listings-bar" style="background: var(--bg-light); padding: 48px 0;">
+        <div class="container">
+            <h2 style="text-align: center; margin-bottom: 8px;">Featured Waterfall Homes</h2>
+            <p style="text-align: center; color: var(--text-light); margin-bottom: 32px;">Browse current listings in the Waterfall neighborhood</p>
+            <realscout-office-listings 
+                agent-encoded-id="QWdlbnQtMjI1MDUw" 
+                sort-order="STATUS_AND_SIGNIFICANT_CHANGE" 
+                listing-status="For Sale" 
+                property-types="SFR,MF"
+                style="width: 100%; border-radius: 12px; overflow: hidden;">
+            </realscout-office-listings>
         </div>
     </section>
 
