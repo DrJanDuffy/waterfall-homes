@@ -362,47 +362,14 @@
             </div>
             
             <div class="contact-grid">
-                <form class="contact-form" id="contact-form">
-                    <h2>Send a Message</h2>
-                    <p>Fill out the form below and Dr. Duffy will respond promptly to discuss your real estate needs.</p>
+                <div class="contact-form">
+                    <h2>Schedule a Consultation</h2>
+                    <p>Book a time to speak with Dr. Duffy about your real estate needs.</p>
                     
-                    <div class="form-group">
-                        <label for="name">Full Name *</label>
-                        <input type="text" id="name" name="name" required placeholder="Your full name">
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="email">Email Address *</label>
-                        <input type="email" id="email" name="email" required placeholder="your@email.com">
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="phone">Phone Number</label>
-                        <input type="tel" id="phone" name="phone" placeholder="(702) 555-1234">
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="interest">I'm Interested In</label>
-                        <select id="interest" name="interest">
-                            <option value="buying">Buying a Home in Waterfall</option>
-                            <option value="selling">Selling My Waterfall Home</option>
-                            <option value="both">Both Buying & Selling</option>
-                            <option value="valuation">Free Home Valuation</option>
-                            <option value="info">General Information</option>
-                        </select>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="message">Message *</label>
-                        <textarea id="message" name="message" required placeholder="Tell me about your real estate goals, timeline, and any questions you have..."></textarea>
-                    </div>
-                    
-                    <button type="submit" class="btn btn-primary form-submit">
-                        <i class="fas fa-paper-plane"></i> Send Message
-                    </button>
-                    
-                    <div id="form-status"></div>
-                </form>
+                    <!-- Calendly inline widget begin -->
+                    <div class="calendly-inline-widget" data-url="https://calendly.com/drjanduffy/appointment" style="min-width:280px;height:650px;"></div>
+                    <!-- Calendly inline widget end -->
+                </div>
                 
                 <div class="contact-info">
                     <h2>Contact Information</h2>
@@ -612,55 +579,6 @@
             </div>
         </div>
     </footer>
-
-    <script>
-        document.getElementById('contact-form').addEventListener('submit', async function(e) {
-            e.preventDefault();
-            
-            const submitBtn = this.querySelector('button[type="submit"]');
-            const statusDiv = document.getElementById('form-status');
-            const originalText = submitBtn.innerHTML;
-            
-            submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
-            submitBtn.disabled = true;
-            
-            const formData = new FormData(this);
-            const data = Object.fromEntries(formData.entries());
-            
-            try {
-                const leadData = {
-                    firstName: data.name.split(' ')[0],
-                    lastName: data.name.split(' ').slice(1).join(' ') || '',
-                    emails: [{ value: data.email }],
-                    phones: data.phone ? [{ value: data.phone }] : [],
-                    source: data.interest || 'website',
-                    sourceUrl: window.location.href,
-                    note: data.message,
-                    tags: ["Waterfall Homes", "Website Lead", "Contact Page"]
-                };
-                
-                const response = await fetch('/api/submit-lead', {
-                    method: 'POST',
-                    headers: { 'Content-Type': 'application/json' },
-                    body: JSON.stringify(leadData)
-                });
-                
-                if (response.ok) {
-                    statusDiv.className = 'success';
-                    statusDiv.innerHTML = '<i class="fas fa-check-circle"></i> Thank you! Your message has been sent successfully. Dr. Duffy will contact you shortly.';
-                    this.reset();
-                } else {
-                    throw new Error('Form submission failed');
-                }
-            } catch (error) {
-                statusDiv.className = 'error';
-                statusDiv.innerHTML = '<i class="fas fa-exclamation-circle"></i> Sorry, there was an error sending your message. Please call (702) 842-2276 directly.';
-            }
-            
-            submitBtn.innerHTML = originalText;
-            submitBtn.disabled = false;
-        });
-    </script>
 
     <!-- Calendly badge widget begin -->
     <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
