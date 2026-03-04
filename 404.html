@@ -5,6 +5,52 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Page Not Found | Waterfall Homes North Las Vegas</title>
     
+    <!-- BreadcrumbList Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.waterfallhomesnorthlasvegas.com/"},
+        {"@type": "ListItem", "position": 2, "name": "Page Not Found", "item": "https://www.waterfallhomesnorthlasvegas.com/404"}
+      ]
+    }
+    </script>
+    
+    <!-- FAQPage Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Where is the Waterfall neighborhood?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Waterfall is a gated community in North Las Vegas, Nevada (89085), near Ann Road and Aliante Parkway. It features resort-style amenities and homes from the mid $300,000s."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How do I find homes for sale in Waterfall?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Visit our Buy page to see current Waterfall listings, or call Dr. Jan Duffy at (702) 842-2276 for a personalized search. She specializes in the Waterfall neighborhood."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How do I contact Dr. Jan Duffy about Waterfall homes?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Call (702) 842-2276, email DrJanSells@WaterfallHomesNorthLasVegas.com, or use the contact form. Dr. Duffy is available 7 days a week, 6 AM to 9 PM."
+          }
+        }
+      ]
+    }
+    </script>
+    
     <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="/favicon.ico">
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
@@ -39,6 +85,7 @@
             background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
             min-height: 100vh;
             display: flex;
+            flex-direction: column;
             align-items: center;
             justify-content: center;
             padding: 24px;
@@ -111,6 +158,9 @@
             background: var(--primary);
             color: white;
         }
+        
+        .breadcrumb { margin-bottom: 16px; font-size: 0.875rem; opacity: 0.9; color: white; }
+        .breadcrumb a { color: white; }
         
         .buttons {
             display: flex;
@@ -188,9 +238,18 @@
                 margin-left: 0;
             }
         }
+        
+        .faq-404 { max-width: 560px; margin: 32px auto 0; padding: 0 24px; }
+        .faq-404 h2 { font-size: 1.25rem; color: white; margin-bottom: 16px; font-family: 'Inter', sans-serif; }
+        .faq-item-404 { background: rgba(255,255,255,0.12); border-radius: 8px; padding: 16px; margin-bottom: 12px; border: 1px solid rgba(255,255,255,0.2); }
+        .faq-item-404 h4 { font-size: 1rem; color: white; margin: 0 0 8px 0; font-family: 'Inter', sans-serif; }
+        .faq-item-404 p { font-size: 0.9rem; color: rgba(255,255,255,0.9); margin: 0; line-height: 1.5; }
     </style>
 </head>
 <body>
+    <nav class="breadcrumb" aria-label="Breadcrumb" style="position: absolute; top: 24px; left: 24px;">
+        <a href="/">Home</a> &gt; Page Not Found
+    </nav>
     <div class="error-container">
         <div class="error-code">404</div>
         <h1>Page Not Found</h1>
@@ -216,6 +275,22 @@
         <div class="contact-info">
             <p>Need immediate assistance?</p>
             <p>Call <a href="tel:7028422276">(702) 842-2276</a></p>
+        </div>
+    </div>
+
+    <div class="faq-404">
+        <h2>Frequently Asked Questions About Waterfall</h2>
+        <div class="faq-item-404">
+            <h4>Where is the Waterfall neighborhood?</h4>
+            <p>Waterfall is a gated community in North Las Vegas, Nevada (89085), near Ann Road and Aliante Parkway. It features resort-style amenities and homes from the mid $300,000s.</p>
+        </div>
+        <div class="faq-item-404">
+            <h4>How do I find homes for sale in Waterfall?</h4>
+            <p>Visit our <a href="/buy" style="color: #c9a227;">Buy</a> page to see current Waterfall listings, or call Dr. Jan Duffy at (702) 842-2276 for a personalized search. She specializes in the Waterfall neighborhood.</p>
+        </div>
+        <div class="faq-item-404">
+            <h4>How do I contact Dr. Jan Duffy about Waterfall homes?</h4>
+            <p>Call (702) 842-2276, email DrJanSells@WaterfallHomesNorthLasVegas.com, or use the <a href="/contact" style="color: #c9a227;">contact form</a>. Dr. Duffy is available 7 days a week, 6 AM to 9 PM.</p>
         </div>
     </div>
 

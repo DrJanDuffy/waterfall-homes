@@ -195,6 +195,22 @@
     }
     </script>
     
+    <!-- BreadcrumbList Schema (homepage: single item) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://www.waterfallhomesnorthlasvegas.com/"
+        }
+      ]
+    }
+    </script>
+    
     <!-- RealScout Widget -->
     <script src="https://em.realscout.com/widgets/realscout-web-components.umd.js" type="module"></script>
     
@@ -582,6 +598,9 @@
             justify-content: center;
             flex-wrap: wrap;
         }
+        
+        .breadcrumb { margin-bottom: 16px; font-size: 0.875rem; opacity: 0.8; }
+        .breadcrumb a { color: white; }
         
         /* Stats Bar */
         .stats-bar {
@@ -1588,6 +1607,9 @@
     <!-- Hero Section -->
     <section class="hero">
         <div class="container">
+            <nav class="breadcrumb" aria-label="Breadcrumb">
+                <a href="/">Home</a>
+            </nav>
             <div class="hero-content">
                 <span class="hero-badge">Berkshire Hathaway HomeServices Nevada Properties</span>
                 <h1>Find Your Dream Home in <span>Waterfall</span></h1>

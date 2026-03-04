@@ -6,6 +6,12 @@
   "cleanUrls": true,
   "trailingSlash": false,
   "redirects": [
+    {
+      "source": "/(.*)",
+      "destination": "https://www.waterfallhomesnorthlasvegas.com/$1",
+      "permanent": true,
+      "has": [{ "type": "host", "value": "waterfallhomesnorthlasvegas.com" }]
+    },
     { "source": "/home", "destination": "/", "permanent": true },
     { "source": "/about-us", "destination": "/about", "permanent": true },
     { "source": "/about-dr-jan-duffy", "destination": "/about", "permanent": true },

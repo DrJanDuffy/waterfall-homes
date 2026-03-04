@@ -14,6 +14,40 @@
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
     
+    <!-- FAQPage Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Does this website only cover the Waterfall neighborhood?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. This site is dedicated to the Waterfall community in North Las Vegas, NV (89085). Dr. Jan Duffy specializes in buying and selling homes in this neighborhood."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How can I contact Dr. Jan Duffy about Waterfall homes?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Call (702) 842-2276, email DrJanSells@WaterfallHomesNorthLasVegas.com, or use the contact form. Your information is used only to respond to your inquiry and provide real estate services."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Where is the Waterfall neighborhood located?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Waterfall is a gated community in North Las Vegas, Nevada (zip 89085), near Ann Road and Aliante Parkway. It offers resort-style amenities and homes from the mid $300,000s."
+          }
+        }
+      ]
+    }
+    </script>
+    
     <!-- RealScout Widget -->
     <script src="https://em.realscout.com/widgets/realscout-web-components.umd.js" type="module"></script>
     
@@ -85,6 +119,11 @@
         .content-wrapper li { margin-bottom: 8px; }
         
         .last-updated { background: var(--bg-light); padding: 16px 24px; border-radius: 8px; margin-bottom: 32px; font-size: 0.9rem; color: var(--text-light); }
+        
+        .faq-section { padding: 80px 0; background: var(--bg-light); }
+        .faq-item { background: white; padding: 24px; border-radius: 12px; margin-bottom: 16px; border: 1px solid #e5e7eb; }
+        .faq-item h4 { margin: 0 0 12px 0; color: var(--primary); font-family: 'Inter', sans-serif; font-size: 1.125rem; }
+        .faq-item p { margin: 0; color: var(--text-light); }
         
         .footer { background: var(--primary-dark); color: white; padding: 60px 0 30px; }
         .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 40px; margin-bottom: 40px; }
@@ -240,6 +279,27 @@
 
                 <h2>Nevada Real Estate Division</h2>
                 <p>Dr. Jan Duffy is licensed by the Nevada Real Estate Division. License Number: S.0197614.LLC</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="faq-section">
+        <div class="container">
+            <div class="content-wrapper">
+                <h2>Frequently Asked Questions About This Site &amp; Waterfall</h2>
+                <p style="color: var(--text-light); margin-bottom: 32px;">Quick answers about the Waterfall Homes website and neighborhood.</p>
+                <div class="faq-item">
+                    <h4>Does this website only cover the Waterfall neighborhood?</h4>
+                    <p>Yes. This site is dedicated to the Waterfall community in North Las Vegas, NV (89085). Dr. Jan Duffy specializes in buying and selling homes in this neighborhood.</p>
+                </div>
+                <div class="faq-item">
+                    <h4>How can I contact Dr. Jan Duffy about Waterfall homes?</h4>
+                    <p>Call (702) 842-2276, email DrJanSells@WaterfallHomesNorthLasVegas.com, or use the contact form. Your information is used only to respond to your inquiry and provide real estate services.</p>
+                </div>
+                <div class="faq-item">
+                    <h4>Where is the Waterfall neighborhood located?</h4>
+                    <p>Waterfall is a gated community in North Las Vegas, Nevada (zip 89085), near Ann Road and Aliante Parkway. It offers resort-style amenities and homes from the mid $300,000s.</p>
+                </div>
             </div>
         </div>
     </section>

@@ -153,6 +153,40 @@
     }
     </script>
     
+    <!-- FAQPage Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Why does Dr. Jan Duffy specialize in the Waterfall neighborhood?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Dr. Duffy has served the Waterfall community since 2008 and has deep knowledge of its homes, HOA, amenities, and market. She helps buyers and sellers in this North Las Vegas neighborhood get the best outcomes."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What price range are Waterfall homes?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Waterfall homes typically range from the mid $300,000s to the mid $500,000s, with sizes from about 1,285 to 1,991 square feet. Dr. Duffy can provide a current market analysis for any specific property."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How do I contact Dr. Duffy about buying or selling in Waterfall?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Call (702) 842-2276, email DrJanSells@WaterfallHomesNorthLasVegas.com, or use the contact form on this site. Dr. Duffy is available 7 days a week, 6 AM to 9 PM."
+          }
+        }
+      ]
+    }
+    </script>
+    
     <!-- RealScout Widget -->
     <script src="https://em.realscout.com/widgets/realscout-web-components.umd.js" type="module"></script>
     
@@ -230,6 +264,11 @@
         .credential-card i { font-size: 2rem; color: var(--accent); margin-bottom: 12px; }
         .credential-card h4 { font-family: 'Inter', sans-serif; font-size: 1rem; margin: 0 0 8px 0; }
         .credential-card p { color: var(--text-light); font-size: 0.875rem; margin: 0; }
+        
+        .faq-section { padding: 80px 0; background: var(--bg-light); }
+        .faq-item { background: white; padding: 24px; border-radius: 12px; margin-bottom: 16px; border: 1px solid var(--border); }
+        .faq-item h4 { margin: 0 0 12px 0; color: var(--primary); font-family: 'Inter', sans-serif; }
+        .faq-item p { margin: 0; color: var(--text-light); }
         
         .services-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; margin-top: 32px; }
         .service-card { background: white; padding: 24px; border-radius: 12px; border: 1px solid var(--border); }
@@ -535,6 +574,27 @@
                 <div class="testimonial-card">
                     <blockquote>"As first-time homebuyers, we were nervous about the process. Dr. Duffy took the time to explain everything, answered all our questions, and helped us find the perfect home in Waterfall within our budget. Highly recommend!"</blockquote>
                     <cite>— Jennifer M., First-Time Homebuyer</cite>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="faq-section">
+        <div class="container">
+            <div class="content-wrapper">
+                <h2>Frequently Asked Questions About Dr. Duffy &amp; Waterfall</h2>
+                <p style="color: var(--text-light); margin-bottom: 32px;">Quick answers about working with Dr. Jan Duffy in the Waterfall neighborhood.</p>
+                <div class="faq-item">
+                    <h4>Why does Dr. Jan Duffy specialize in the Waterfall neighborhood?</h4>
+                    <p>Dr. Duffy has served the Waterfall community since 2008 and has deep knowledge of its homes, HOA, amenities, and market. She helps buyers and sellers in this North Las Vegas neighborhood get the best outcomes.</p>
+                </div>
+                <div class="faq-item">
+                    <h4>What price range are Waterfall homes?</h4>
+                    <p>Waterfall homes typically range from the mid $300,000s to the mid $500,000s, with sizes from about 1,285 to 1,991 square feet. Dr. Duffy can provide a current market analysis for any specific property.</p>
+                </div>
+                <div class="faq-item">
+                    <h4>How do I contact Dr. Duffy about buying or selling in Waterfall?</h4>
+                    <p>Call (702) 842-2276, email DrJanSells@WaterfallHomesNorthLasVegas.com, or use the contact form on this site. Dr. Duffy is available 7 days a week, 6 AM to 9 PM.</p>
                 </div>
             </div>
         </div>
